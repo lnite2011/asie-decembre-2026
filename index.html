@@ -1,0 +1,144 @@
+<!doctype html>
+<html lang="fr">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Cap sur l’Asie · Singapour, Vietnam, Thaïlande</title>
+<meta name="description" content="Le carnet de voyage de décembre 2026 : Singapour, Vietnam, Thaïlande.">
+<meta name="robots" content="noindex, nofollow">
+<meta name="theme-color" content="#0f2a35">
+<link rel="manifest" href="manifest.webmanifest">
+<link rel="icon" href="icon.svg" type="image/svg+xml">
+<link rel="apple-touch-icon" href="icon.svg">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,500;12..96,700;12..96,800&family=Instrument+Sans:ital,wght@0,400;0,500;0,600;0,700;1,400&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="vendor/leaflet.css">
+<link rel="stylesheet" href="styles.css">
+</head>
+<body>
+<a class="skip" href="#parcours">Aller au contenu</a>
+
+<header class="top" id="top">
+  <a class="brand" href="#" aria-label="Haut de page">
+    <svg viewBox="0 0 24 30" width="20" height="25" aria-hidden="true"><path d="M12 0v4" stroke="currentColor" stroke-width="2"/><ellipse cx="12" cy="15" rx="9" ry="11" fill="#d9432b"/><path d="M5 8h14M3.500 15h17M5 22h14" stroke="#f2b43b" stroke-width="1.400" fill="none"/></svg>
+    <span>Cap sur l’Asie</span>
+  </a>
+  <nav class="menu" aria-label="Sections">
+    <a href="#parcours">Parcours</a>
+    <a href="#jours">Jour par jour</a>
+    <a href="#voir">À voir</a>
+    <a href="#table">À table</a>
+    <a href="#pratique">Pratique</a>
+  </nav>
+</header>
+
+<main>
+  <section class="hero" id="hero" aria-label="Accueil">
+    <div class="slides" id="slides" aria-hidden="true"></div>
+    <div class="garland" id="garland" aria-hidden="true"></div>
+    <div class="hero-copy">
+      <p class="flags" aria-label="Singapour, Vietnam, Thaïlande"><span>🇸🇬</span><span>🇻🇳</span><span>🇹🇭</span></p>
+      <h1>Cap sur<br>l’Asie</h1>
+      <p class="hero-sub">Singapour · Vietnam · Thaïlande</p>
+      <p class="hero-meta"><span>Du 11 au 27 décembre 2026</span><span id="who"></span></p>
+      <p class="count" id="count" hidden></p>
+    </div>
+    <a class="scroll-cue" href="#parcours" aria-label="Voir le parcours"><span></span></a>
+  </section>
+
+  <section class="sec" id="parcours">
+    <div class="wrap">
+      <h2>Le parcours</h2>
+      <p class="lead">Six étapes, du sud au nord, puis on redescend jusqu’aux plages de Thaïlande pour fêter Noël.</p>
+    </div>
+    <div class="wrap mapwrap">
+      <div id="map" role="application" aria-label="Carte du voyage"></div>
+      <ol class="stops" id="stops"></ol>
+    </div>
+    <p class="wrap legend"><span><i class="l-air"></i> vol</span><span><i class="l-road"></i> route</span><span><i class="l-boat"></i> bateau</span><span class="muted">Paris ⇄ Singapour (Maman &amp; Quentin) hors carte</span></p>
+    <div class="cards-scroll" id="postcards" aria-label="Les étapes en cartes postales"></div>
+  </section>
+
+  <section class="sec tint" id="jours">
+    <div class="wrap">
+      <h2>Jour par jour</h2>
+      <p class="lead">Du 11 au 27 décembre, heure par heure. Les horaires sont en heure locale.</p>
+      <div class="bar-tools">
+        <div class="chips" id="filtre-jours" role="group" aria-label="Filtrer les jours"></div>
+        <button class="linkbtn" id="toggle-all" type="button">Tout déplier</button>
+      </div>
+      <ol class="days" id="days"></ol>
+    </div>
+  </section>
+
+  <section class="sec" id="voir">
+    <div class="wrap">
+      <h2>À voir</h2>
+      <p class="lead">Les incontournables, et quelques idées pour les moments libres.</p>
+      <div class="chips" id="filtre-voir" role="group" aria-label="Filtrer par pays"></div>
+      <ul class="mosaic" id="mosaic"></ul>
+    </div>
+  </section>
+
+  <section class="sec tint" id="table">
+    <div class="wrap">
+      <h2>À table</h2>
+      <p class="lead">Ce qu’on va manger, et il y a de quoi faire. Chaque plat est rattaché au jour où l’on a le plus de chances de le croiser.</p>
+      <div id="plats"></div>
+      <div class="tips"><h3>Quelques réflexes</h3><ul id="conseils"></ul></div>
+    </div>
+  </section>
+
+  <section class="sec" id="pratique">
+    <div class="wrap">
+      <h2>Pratique</h2>
+      <p class="lead">Vols, trains, papiers, météo et valise. Les billets sont réservés par Fanny : il n’y a rien à payer, juste à être à l’heure 😉</p>
+
+      <h3 class="sub">Les vols</h3>
+      <div class="passes" id="vols"></div>
+
+      <h3 class="sub">Les trains en France</h3>
+      <ul class="tickets" id="trains"></ul>
+
+      <h3 class="sub">Les formalités d’entrée <small>passeport français</small></h3>
+      <ul class="checks" id="formalites"></ul>
+      <p class="alert" id="alerte"></p>
+
+      <h3 class="sub">La météo, du frais de Hanoï au grand soleil de Phuket</h3>
+      <div class="weather" id="meteo"></div>
+
+      <div class="two">
+        <div>
+          <h3 class="sub">Dans la valise <small>cochez au fur et à mesure</small></h3>
+          <ul class="packlist" id="valise"></ul>
+        </div>
+        <div>
+          <h3 class="sub">Quelques mots</h3>
+          <ul class="phrases" id="mots"></ul>
+        </div>
+      </div>
+
+      <h3 class="sub">Argent, téléphone, prises</h3>
+      <div class="infos" id="infos"></div>
+    </div>
+  </section>
+</main>
+
+<footer class="foot">
+  <div class="wrap">
+    <p class="foot-big">Bon voyage ✈️</p>
+    <p>Les hôtels restent une surprise 🤫 — on vous emmène !</p>
+    <details class="credits"><summary>Crédits photos (Creative Commons)</summary>
+      <p>Toutes les photos viennent de Wikimedia Commons et sont utilisées sous licence libre. Merci aux photographes. Carte : © contributeurs OpenStreetMap.</p>
+      <ul id="credits"></ul>
+    </details>
+    <p class="small">Préparé par Fanny · 2026</p>
+  </div>
+</footer>
+
+<script src="vendor/leaflet.js"></script>
+<script src="content.js"></script>
+<script src="app.js"></script>
+</body>
+</html>
