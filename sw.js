@@ -1,5 +1,5 @@
 // Site hors ligne pour les zones sans réseau. Tuiles de carte non mises en cache.
-const V = "asie-v1";
+const V = "asie-v2";
 const SHELL = ["./", "index.html", "styles.css", "app.js", "credits.json", "icon.svg", "content.js", "vendor/leaflet.js", "vendor/leaflet.css"];
 
 self.addEventListener("install", (e) => {

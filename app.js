@@ -220,12 +220,18 @@ function buildPratique() {
     return `<article class="wx"><span class="wx-i">${m.i}</span><h4>${fr(m.l)}</h4><p class="wx-t">${fr(m.t)}</p><span class="wx-bar" role="img" aria-label="${m.lo} à ${m.hi} degrés"><i style="left:${x0}%;width:${Math.max(6, x1 - x0)}%"></i></span><p>${fr(m.p)}</p></article>`;
   }).join("");
   const KEY = "asie2026:valise";
-  let done = []; try { done = JSON.parse(localStorage.getItem(KEY) || "[]"); } catch {}
-  $("#valise").innerHTML = V.valise.map((x, i) => `<li><label><input type="checkbox" data-i="${i}" ${done.includes(i) ? "checked" : ""}><span>${fr(x)}</span></label></li>`).join("");
+  let done = []; try { const r = JSON.parse(localStorage.getItem(KEY) || "[]"); done = Array.isArray(r) ? r.filter((x) => typeof x === "string") : []; } catch {}
+  const total = V.valise.reduce((n, g) => n + g.l.length, 0);
+  $("#valise").innerHTML = V.valise.map((g) => `<section class="packcat"><h4><span>${g.i}</span>${fr(g.c)}</h4><ul>` +
+    g.l.map((it) => `<li><label><input type="checkbox" data-k="${esc(it.k)}" ${done.includes(it.k) ? "checked" : ""}><span>${fr(it.t)}</span></label></li>`).join("") +
+    `</ul></section>`).join("");
+  const count = () => { const n = $$("#valise input:checked").length; $("#valise-count").textContent = n ? `${n} / ${total} coché${n > 1 ? "s" : ""}` : `${total} choses à préparer`; };
   $("#valise").addEventListener("change", () => {
-    const on = $$("#valise input:checked").map((i) => +i.dataset.i);
+    const on = $$("#valise input:checked").map((i) => i.dataset.k);
     try { localStorage.setItem(KEY, JSON.stringify(on)); } catch {}
+    count();
   });
+  count();
   $("#mots").innerHTML = V.mots.map((m) => `<li style="--c:${col(m.p)}"><span class="fl">${V.pays[m.p].drapeau}</span><span class="fr">${fr(m.f)}</span><b>${esc(m.l)}</b><em>${esc(m.r)}</em></li>`).join("");
   $("#infos").innerHTML = V.infos.map((i) => `<article><span>${i.i}</span><h4>${fr(i.t)}</h4><p>${fr(i.p)}</p></article>`).join("");
 }
