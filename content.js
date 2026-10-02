@@ -41,10 +41,10 @@ window.VOYAGE = {
 
   // Jour par jour. nuit = description sans nom d'hôtel.
   jours: [
-    { d: "2026-12-11", pays: "fr", etape: "Paris", titre: "Quentin monte à Paris", cle: "🚆 6h50 → 10h04",
-      resume: "Première étape pour Quentin, qui dort à Paris avant le grand départ.",
+    { d: "2026-12-11", pays: "fr", etape: "Paris", titre: "Quentin monte à Paris", cle: "🚆 18h50 → 22h04",
+      resume: "Première étape pour Quentin : train du soir, puis une nuit à Paris avant le grand départ.",
       items: [
-        { k: "train", h: "6h50", t: "Montpellier → Paris Gare de Lyon", p: "Arrivée à 10h04. Journée libre à Paris." },
+        { k: "train", h: "18h50", t: "Montpellier → Paris Gare de Lyon", p: "Arrivée à 22h04. Dîner dans le train, l’hôtel est juste en face de la gare." },
         { k: "nuit", t: "Nuit à Paris, juste en face de la gare de Lyon." },
       ] },
     { d: "2026-12-12", pays: "fr", etape: "Roissy", titre: "En route pour l’Asie", cle: "✈️ 22h20 Paris → Singapour",
@@ -270,7 +270,7 @@ window.VOYAGE = {
     { j: "2026-12-26", de: "SIN", dl: "Singapour", a: "CDG", al: "Paris", dep: "14h00", arr: "~21h00", qui: "Maman, Quentin" },
   ],
   trains: [
-    { j: "2026-12-11", qui: "Quentin", t: "Montpellier Sud de France → Paris Gare de Lyon", h: "6h50 → 10h04" },
+    { j: "2026-12-11", qui: "Quentin", t: "Montpellier Sud de France → Paris Gare de Lyon", h: "18h50 → 22h04" },
     { j: "2026-12-12", qui: "Maman", t: "Lorraine TGV → aéroport CDG", h: "10h39 → 12h00" },
     { j: "2026-12-27", qui: "Maman", t: "Aéroport CDG → Lorraine TGV", h: "le matin · à réserver" },
     { j: "2026-12-27", qui: "Quentin", t: "Aéroport CDG → Montpellier", h: "~2 h après Maman · à réserver" },
@@ -293,16 +293,16 @@ window.VOYAGE = {
   ],
   valise: [
     "Des vêtements légers, pour 8 jours — on fera une lessive à Hội An",
-    "Une doudoune fine compressible : elle sert pour l’hiver français au départ comme pour les soirées de Hanoï et de la baie d’Along",
+    "De quoi avoir chaud le soir à Hanoï et sur la baie d’Along (14–20 °C)",
     "Un imperméable léger pour Hội An",
     "Deux maillots de bain, lunettes de soleil, chapeau",
-    "Crème solaire et anti-moustiques",
+    "Crème solaire indice élevé",
     "Une tenue un peu habillée pour le réveillon 🎄",
     "Des chaussures confortables pour marcher, et des sandales",
     "Vos médicaments habituels, avec l’ordonnance",
-    "Un adaptateur de prise universel, et la batterie externe en bagage à main",
+    "La batterie externe, en bagage à main (jamais en soute)",
     "Un sac étanche pour les traversées en hors-bord vers l’île",
-    "Passeport, copie numérique et cartes d’arrivée",
+    "Passeport et copie numérique — Fanny s’occupe des cartes d’arrivée, de l’eSIM et des adaptateurs",
     "🚫 Pas de cigarette électronique : elle est interdite à Singapour comme en Thaïlande",
   ],
   infos: [
