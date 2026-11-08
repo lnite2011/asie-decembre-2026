@@ -168,11 +168,11 @@ window.VOYAGE = {
         { k: "vol", h: "14h00", t: "Singapour → Paris CDG (Maman & Quentin)", p: "Vol de jour, arrivée à Roissy vers 21h le soir même." },
         { k: "nuit", t: "Nuit dans un hôtel à l’aéroport CDG, relié aux terminaux par le CDG VAL." },
       ] },
-    { d: "2026-12-27", pays: "fr", etape: "Roissy → la maison", titre: "Trains pour rentrer", cle: "🚆 Trains à réserver",
-      resume: "Dix minutes de CDG VAL jusqu’à la gare TGV, puis chacun rentre chez soi.",
+    { d: "2026-12-27", pays: "fr", etape: "Roissy → Metz", titre: "Le train du retour", cle: "🚆 11h54 → Metz 13h53",
+      resume: "Dix minutes de CDG VAL jusqu’à la gare TGV, puis le même train pour Maman et Quentin jusqu’à Metz.",
       items: [
-        { k: "train", h: "Matin", t: "Maman : CDG TGV → Lorraine TGV", p: "Train du matin (billet à réserver)." },
-        { k: "train", h: "~2 h plus tard", t: "Quentin : CDG TGV → Montpellier", p: "Environ deux heures après Maman (billet à réserver)." },
+        { k: "taxi", h: "~11h15", t: "CDG VAL jusqu’à la gare TGV", p: "Dix minutes depuis l’hôtel, plus quelques minutes à pied jusqu’aux quais." },
+        { k: "train", h: "11h54", t: "Maman & Quentin : CDG TGV → Metz", p: "Arrivée à 13h53, en première classe. Quentin raccompagne Maman jusqu’à Metz." },
       ] },
   ],
 
@@ -274,8 +274,7 @@ window.VOYAGE = {
   trains: [
     { j: "2026-12-11", qui: "Quentin", t: "Montpellier Sud de France → Paris Gare de Lyon", h: "12h51 → 16h12" },
     { j: "2026-12-12", qui: "Maman", t: "Lorraine TGV → aéroport CDG", h: "10h39 → 12h00" },
-    { j: "2026-12-27", qui: "Maman", t: "Aéroport CDG → Lorraine TGV", h: "le matin · à réserver" },
-    { j: "2026-12-27", qui: "Quentin", t: "Aéroport CDG → Montpellier", h: "~2 h après Maman · à réserver" },
+    { j: "2026-12-27", qui: "Maman & Quentin", t: "Aéroport CDG → Metz (1re classe)", h: "11h54 → 13h53" },
   ],
 
   formalites: [
