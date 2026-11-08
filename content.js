@@ -41,10 +41,10 @@ window.VOYAGE = {
 
   // Jour par jour. nuit = description sans nom d'hôtel.
   jours: [
-    { d: "2026-12-11", pays: "fr", etape: "Paris", titre: "Quentin monte à Paris", cle: "🚆 18h50 → 22h04",
-      resume: "Première étape pour Quentin : train du soir, puis une nuit à Paris avant le grand départ.",
+    { d: "2026-12-11", pays: "fr", etape: "Paris", titre: "Quentin monte à Paris", cle: "🚆 12h51 → 16h12",
+      resume: "Première étape pour Quentin : train de l’après-midi, puis une soirée et une nuit à Paris avant le grand départ.",
       items: [
-        { k: "train", h: "18h50", t: "Montpellier → Paris Gare de Lyon", p: "Arrivée à 22h04. Dîner dans le train, l’hôtel est juste en face de la gare." },
+        { k: "train", h: "12h51", t: "Montpellier → Paris Gare de Lyon", p: "Arrivée à 16h12. L’hôtel est juste en face de la gare : soirée libre à Paris." },
         { k: "nuit", t: "Nuit à Paris, juste en face de la gare de Lyon." },
       ] },
     { d: "2026-12-12", pays: "fr", etape: "Roissy", titre: "En route pour l’Asie", cle: "✈️ 22h20 Paris → Singapour",
@@ -272,7 +272,7 @@ window.VOYAGE = {
     { j: "2026-12-26", de: "SIN", dl: "Singapour", a: "CDG", al: "Paris", dep: "14h00", arr: "~21h00", qui: "Maman, Quentin" },
   ],
   trains: [
-    { j: "2026-12-11", qui: "Quentin", t: "Montpellier Sud de France → Paris Gare de Lyon", h: "18h50 → 22h04" },
+    { j: "2026-12-11", qui: "Quentin", t: "Montpellier Sud de France → Paris Gare de Lyon", h: "12h51 → 16h12" },
     { j: "2026-12-12", qui: "Maman", t: "Lorraine TGV → aéroport CDG", h: "10h39 → 12h00" },
     { j: "2026-12-27", qui: "Maman", t: "Aéroport CDG → Lorraine TGV", h: "le matin · à réserver" },
     { j: "2026-12-27", qui: "Quentin", t: "Aéroport CDG → Montpellier", h: "~2 h après Maman · à réserver" },
